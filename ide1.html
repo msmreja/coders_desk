@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <title>Coder's Desk</title>
+  <link rel="stylesheet" href="stylee.css">
+ <style> 
+body{
+  background: url("img/home.jpg");
+}
+#btn{
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 50px);
+ }
+ .reg-bt{
+		transform: translate(-50%,-50%);
+
+		font-family:sans-serif;
+		box-sizing: border-box;
+		background-size:400%;
+		border-radius:60px;
+		background:linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+}
+ .related_img{
+    height:200px;
+    width:200px;
+    box-sizing: border-box;
+    border:#f44336;
+
+
+ }
+ .match_a{
+	width: 100px;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 300px;
+    left: 380px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+}
+	.login-box input[type="text"], input[type="password"]
+ .match_a{
+    
+	border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    color: black;
+    font-size: 16px
+	}
+.clbc22a1{
+    width: 320px;
+    height: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 60%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+ 
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script data-ad-client="ca-pub-4143451680669259" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+
+<body>
+  <nav class="navbar">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+
+    <ul class="navbar-nav">
+      <li><a href="index.php">HOME</a></li>
+      <li><a href="course.php">COURSES</a></li>
+      <li><a href="ide1.php">CODE ARENA</a></li>
+      <li><a href="help.php">HELP DESK</a></li>
+    </ul>
+  </nav>
+
+  <div id="side-menu" class="side-nav">
+     
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <img src="img/avatar.png" class="avatar"><br><br>
+    <h4 align="center" style="color:red">
+    </h4>     
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <a href="index.php">HOME</a>
+    <a href="course.php">COURSES</a>
+    <a href="ide1.php">CODE ARENA</a>
+    <a href="help.php">HELP DESK</a>
+    <br>
+    <button onclick="document.location='logout.php'">Logout</button>
+  </div>
+  
+  <br>
+  <br>
+
+  <script>
+    function openSlideMenu(){
+      document.getElementById('side-menu').style.width = '250px';
+      document.getElementById('main').style.marginLeft = '250px';
+    }
+
+    function closeSlideMenu(){
+      document.getElementById('side-menu').style.width = '0';
+      document.getElementById('main').style.marginLeft = '0';
+    }
+  </script>
+</div> 
+
+
+<div class=""> Online IDE </div>
+
+<div class="control-panel">
+  Select Language:
+  &nbsp; &nbsp;
+  <select id="languages" class="languages" onchange="changeLanguage()">
+      <option value="C"> C </option>
+      <option value="CPP"> C++ </option>
+      <option value="PYTHON"> Python </option>
+      <option value="JAVA"> Java </option>
+
+  </select>
+</div>
+  <div class="editor" id="editor"></div>
+  <form action="save_script.php" method="POST">  
+    </div>
+    <h2>Inputs</h2>
+    <textarea id="input" name="stdin" rows="4" cols="50"></textarea>
+    <div class="button-container">
+      <input type="submit" name="submit" value="submit">
+    </div>
+  </form>
+
+    <div class="output"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/lib/ace.js"></script>
+    <script src="js/lib/theme-monokai.js"></script>
+    <script src="js/ide.js"></script>
+
+<br>
+<br>
+<br>
+</div>
+</body>
+</html>
